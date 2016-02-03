@@ -24,7 +24,7 @@
         <li class="list-group-item">
           <p>
            <%= event.author %>
-           <%= event.message.html_safe %>
+           <a href='https://<%="#{@shop_session.url}/"%>'target="_blank"> <%= event.message.html_safe %> </a>
           </p>
           <p>
            <%= event.created_at %>
