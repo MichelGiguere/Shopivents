@@ -24,7 +24,7 @@
         <li class="list-group-item">
           <p>
            <%= event.author %>
-           <%= event.message.gsub(/[href="]/, 'href="#{@shop_session.url}').html_safe %>
+           <%= event.message.gsub(/[=]/, '="#{@shop_session.url}').html_safe %>
           </p>
           <p>
            <%= event.created_at %>
