@@ -1,7 +1,7 @@
 module ApplicationHelper
 	def change_url(url)
-		a = message1.gsub(/[=]/, '=' '=http://#{@shop_session.url}')
-		b = message2.gsub(/["]/, '')
+		a = url.gsub(/[=]/, '=' '=http://#{@shop_session.url}')
+		b = a.gsub(/["]/, '')
 		return b
 	end
 end
