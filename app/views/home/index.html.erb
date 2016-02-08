@@ -24,7 +24,7 @@
         <li class="list-group-item">
           <p>
            <%= event.author %>
-           <%= change_url(event.message).html_safe %>
+           <%= change_url(event.message).html_safe, target: '_blank' %>
           </p>
           <p>
            <%= event.created_at %>
