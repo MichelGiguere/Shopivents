@@ -22,9 +22,11 @@
     <h1>Shopivents</h1>
           <% @events.each do |event| %>
         <li class="list-group-item">
-          <p target="_blank">
+          <p>
            <%= event.author %>
+           <a target="_self">
            <%= change_url(event.message).html_safe %>
+           </a>
           </p>
           <p>
            <%= event.created_at %>
