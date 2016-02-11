@@ -1,28 +1,42 @@
 <script type="text/javascript">
   ShopifyApp.ready(function(){
     ShopifyApp.Bar.initialize({
-      title: "Home",
+      title: "More",
       icon: "<%= asset_path('faveicon.png') %>"
     });
   });
 </script>
-<h1>Shopifvents</h1>
-<table>
-  <tbody>
-     <% @events.each do |event| %>
-        <li>
+<head>
+  <link href="/app/assets/stylesheets/application.css" rel="stylesheet" />
+</head>
+  <body>
+
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+    </div>
+      </div>
+        </div>
+
+    <div class="container">
+    <h1>Shopivents</h1>
+          <% @events.each do |event| %>
+        <li class="list-group-item">
           <p>
            <%= event.author %>
-           <%= event.message %>
+           <%= change_url(event.message).html_safe %>
           </p>
           <p>
-           <%= event.created_at %>
+           <%= fix_time(event.created_at) %>
           </p>
         </li>
     <% end %>
-  </tbody>
+    </div>
+  </body>
   <footer>
-    <h3>
-      <a href="/">Load Previous Page</a>
-    </h3>
-</table>
+      <div style="text-align: center;">
+        <h3>
+      <a href="/">Load Less</a>
+        </h3>
+    </div>
+    </footer>
