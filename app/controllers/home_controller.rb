@@ -4,6 +4,6 @@ class HomeController < AuthenticatedController
   end
 
   def page2
-  	@events = ShopifyAPI::Event.find(:all, :params => {:page => 2})
+  	@events2 = ShopifyAPI::Event.find(:all, :params => {:page => 2})
   end
 end
