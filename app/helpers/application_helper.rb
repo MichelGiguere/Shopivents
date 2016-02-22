@@ -1,7 +1,6 @@
 module ApplicationHelper
 	def change_url(url)
 		a = url.gsub(/[<a href=[^]+?>]/, '')
-		return a
 	end
 
 	def fix_time(time)
