@@ -1,7 +1,7 @@
 module ApplicationHelper
 	def change_url(url)
-		a = url.gsub(/[=]/, "=https://#{@shop_session.url}")
-		b = a.gsub(/["]/, '')
+		a = url.gsub(/[<a href=[^]+?>]/, '')
+		b = a.gsub(/[<\/a>]/, '')
 		return b
 	end
 	def fix_time(time)
