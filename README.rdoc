@@ -1,4 +1,3 @@
 == README
 
-Shopivents app reads events via Shopify API
-Embedded Shopify POS app
+Shopivents app reads events via Shopify API - Embedded Shopify POS app
