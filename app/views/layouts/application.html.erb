@@ -5,6 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://cdn.shopify.com/s/assets/external/pos_app.js"></script>
+  <script type="text/javascript">
+    ShopifyPOS.init({
+      apiKey: 'a6b71f97627e670b6ff51e8676ee46c1',
+      shopOrigin: @shop.session_url
+    });
+  </script>
 </head>
 <body>
 
