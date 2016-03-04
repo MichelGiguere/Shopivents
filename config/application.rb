@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module TestApp
   class Application < Rails::Application
     config.action_dispatch.default_headers['P3P'] = 'CP="Not used"'
-    config.action_dispatch.default_headers = {'X-Frame-Options' => 'ALLOW-FROM https://michelstore.myshopify.com'}
+    config.action_dispatch.default_headers = {'X-Frame-Options' => 'ALLOW-FROM https://fast-ridge-43073.herokuapp.com'}
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
