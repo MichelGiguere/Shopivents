@@ -42,6 +42,10 @@
         </div>
 
     <div class="container">
+
+      <div role="tabpanel" class="tab-pane fade in active" id="all">
+    <div id="all-events">
+
     <h1>Shopivents</h1>
           <% @events.each do |event| %>
         <li class="list-group-item">
@@ -55,7 +59,29 @@
         </li>
     <% end %>
     </div>
+
+    <div class="container">
+
+      <div role="tabpanel" class="tab-pane fade in active" id="all">
+    <div id="all-events">
+
+    <h1>Shopivent Orders</h1>
+          <% @orders.each do |order| %>
+        <li class="list-group-item">
+          <p>
+           <%= order.author %>
+           <%= change_url(order.message).html_safe %>
+          </p>
+          <p>
+           <%= time_ago_in_words(order.created_at) %> ago
+          </p>
+        </li>
+    <% end %>
+    </div>
+
   </body>
+
+
   <footer style="height: 15px;">
   <div class="footer">
     <p>
